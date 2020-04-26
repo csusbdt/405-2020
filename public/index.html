@@ -8,13 +8,14 @@
     <script defer src="/__/firebase/7.14.1/firebase-auth.js"></script>
     <script defer src="/__/firebase/7.14.1/firebase-analytics.js"></script>
     <script defer src="/__/firebase/init.js"></script>
+    <script src="a.js"></script>
   </head>
   <body>
     <div id="a_msg">loading ...</div>
 
     <div id="a_logging_in" style="display: none">
       <div>
-        Email: <input id="a_email" type="text" value="csusbdt@gmail.com" />
+        Email: <input id="a_email" type="text" value="dturner@csusb.edu" />
         <input id="a_send_link_btn" type="submit" value="Send Login Link"/>
       </div>
     </div>
@@ -23,29 +24,6 @@
       <input id="a_logout_btn" type="submit" value="Logout"/>
       Hi!!!
     </div>
-
-    <script>
-      function login() {
-        const email = a_email.value
-        // pretend we successfully logged in
-        a_msg.innerHTML            = "logged in"
-        a_logging_in.style.display = "none"
-        a_logged_in.style.display  = "block"
-      }
-
-      function logout() {
-        // pretend we successfully logged out
-        a_msg.innerHTML            = "logged out"
-        a_logging_in.style.display = "block"
-        a_logged_in.style.display  = "none"
-      }
-
-      document.addEventListener('DOMContentLoaded', () => {
-        a_msg.innerHTML = "loaded"
-        a_logging_in.style.display = "block"
-        a_send_link_btn.addEventListener('click', login)
-        a_logout_btn.addEventListener('click', logout)
-      })
-    </script>
+    
   </body>
 </html>
