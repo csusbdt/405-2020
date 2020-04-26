@@ -8,8 +8,10 @@
     <script defer src="/__/firebase/7.14.1/firebase-auth.js"></script>
     <script defer src="/__/firebase/7.14.1/firebase-analytics.js"></script>
     <script defer src="/__/firebase/init.js"></script>
+    <script src="a.js"></script>
   </head>
   <body>
+    <script>console.log("(2) in the body")</script>
     <div id="a_msg">loading ...</div>
 
     <div id="a_logging_in" style="display: none">
@@ -24,28 +26,5 @@
       Hi!!!
     </div>
 
-    <script>
-      function login() {
-        const email = a_email.value
-        // pretend we successfully logged in
-        a_msg.innerHTML            = "logged in"
-        a_logging_in.style.display = "none"
-        a_logged_in.style.display  = "block"
-      }
-
-      function logout() {
-        // pretend we successfully logged out
-        a_msg.innerHTML            = "logged out"
-        a_logging_in.style.display = "block"
-        a_logged_in.style.display  = "none"
-      }
-
-      document.addEventListener('DOMContentLoaded', () => {
-        a_msg.innerHTML = "loaded"
-        a_logging_in.style.display = "block"
-        a_send_link_btn.addEventListener('click', login)
-        a_logout_btn.addEventListener('click', logout)
-      })
-    </script>
-  </body>
+ </body>
 </html>

@@ -1,3 +1,7 @@
+# added by DT
+
+*.swp
+
 # Logs
 logs
 *.log
