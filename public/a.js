@@ -56,6 +56,12 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hostname === "localhost") {
+      firebase.firestore().settings({
+        host: "localhost:8080",
+        ssl: false
+      });
+    }
     a_msg.innerHTML = "loaded"
     a_send_link_btn.addEventListener('click', sendEmailLoginLink)
     a_logout_btn.addEventListener('click', logout)
