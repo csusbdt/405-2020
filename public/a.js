@@ -1,4 +1,6 @@
 (function() {
+  window.a = {}
+
   function sendEmailLoginLink() {
     a_send_link_btn.disabled = true
     const email = a_email.value
@@ -43,11 +45,13 @@
       a_logging_in.style.display = "block"
       a_logged_in.style.display  = "none"
       a_send_link_btn.disable    = false
+      if (a.logout) a.logout();
     } else {
       a_msg.innerHTML            = "logged in"
       a_logging_in.style.display = "none"
       a_logged_in.style.display  = "block"
       a_logout_btn.disable       = false
+      if (a.login) a.login();
     }
   }
 

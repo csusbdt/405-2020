@@ -1,0 +1,14 @@
+{
+  "name": "servprog",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "firebase emulators:exec --only firestore 'mocha'"
+  },
+  "dependencies": {
+    "@firebase/testing": "^0.19.4"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.2"
+  }
+}
