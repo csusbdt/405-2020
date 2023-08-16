@@ -6,7 +6,7 @@
     "test": "firebase emulators:exec --only firestore 'mocha'"
   },
   "dependencies": {
-    "@firebase/testing": "^0.19.6"
+    "@firebase/testing": "^0.20.11"
   },
   "devDependencies": {
     "mocha": "^7.2.0"
